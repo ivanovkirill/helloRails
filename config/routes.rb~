@@ -1,0 +1,9 @@
+Blog::Application.routes.draw do
+ 
+  resources :posts
+ 
+  root to: "welcome#index"
+  def index
+    @posts = Post.all
+  end
+end
